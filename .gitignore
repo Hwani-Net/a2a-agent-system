@@ -1,55 +1,66 @@
-# Python
+# Environment variables and secrets
+.env
+.env.*
+*.env
+
+# Python cache and build files
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
-*.egg
+build/
+dist/
+.pytest_cache/
 
-# 환경변수
-.env
-.env.local
-.env.*.local
-
-# 가상환경
+# Virtual environments
 venv/
 env/
 ENV/
-a2a_env/
 
-# IDE
+# IDE and editor files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# 로그
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
 *.log
 logs/
 
-# 테스트
-.coverage
-.pytest_cache/
-.tox/
-
-# 운영체제
-.DS_Store
-Thumbs.db
-
-# 임시 파일
+# Temporary files
 *.tmp
-*.temp
+*.bak
+*.backup
+
+# Local configuration files
+config_local.py
+local_settings.py
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Smithery deployment artifacts
+.smithery/
+deployment/

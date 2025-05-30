@@ -1,0 +1,106 @@
+{
+    "name": "a2a-agent-system",
+    "version": "1.0.0",
+    "description": "A2A (Agent2Agent) compatible AI agent system with MCP support",
+    "main": "mcp_server.py",
+    "type": "mcp-server",
+    "author": "A2A Team",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/a2a-agent-system"
+    },
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "a2a",
+        "agent2agent",
+        "ai-agent",
+        "openai",
+        "anthropic"
+    ],
+    "capabilities": {
+        "tools": [
+            {
+                "name": "generate_text",
+                "description": "Generate text using AI models (OpenAI GPT or Anthropic Claude)"
+            },
+            {
+                "name": "analyze_text",
+                "description": "Analyze text for sentiment, summary, and key insights"
+            },
+            {
+                "name": "web_search",
+                "description": "Search the web for information"
+            },
+            {
+                "name": "get_weather",
+                "description": "Get current weather information for a location"
+            }
+        ],
+        "resources": [
+            {
+                "uri": "agent://card",
+                "name": "Agent Card",
+                "description": "A2A agent card information"
+            },
+            {
+                "uri": "agent://config",
+                "name": "Configuration",
+                "description": "Current server configuration"
+            },
+            {
+                "uri": "agent://status",
+                "name": "Server Status",
+                "description": "Real-time server status"
+            }
+        ]
+    },
+    "environment": {
+        "required": [],
+        "optional": [
+            {
+                "name": "OPENAI_API_KEY",
+                "description": "OpenAI API key for text generation capabilities",
+                "type": "secret"
+            },
+            {
+                "name": "ANTHROPIC_API_KEY",
+                "description": "Anthropic API key for Claude models",
+                "type": "secret"
+            },
+            {
+                "name": "PERPLEXITY_API_KEY",
+                "description": "Perplexity API key for web search",
+                "type": "secret"
+            },
+            {
+                "name": "SERPER_API_KEY",
+                "description": "Serper API key for web search",
+                "type": "secret"
+            },
+            {
+                "name": "OPENWEATHER_API_KEY",
+                "description": "OpenWeatherMap API key for weather data",
+                "type": "secret"
+            }
+        ]
+    },
+    "deployment": {
+        "docker": {
+            "image": "a2a-agent-system:latest",
+            "dockerfile": "Dockerfile",
+            "ports": [
+                "8000"
+            ],
+            "healthCheck": "/health"
+        },
+        "runtime": "python3.11",
+        "entrypoint": "python mcp_server.py"
+    },
+    "security": {
+        "apiKeysHandling": "environment-variables",
+        "encryptionInTransit": true,
+        "sandboxed": true
+    }
+}

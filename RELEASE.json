@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "release_date": "2025-05-30T18:20:09.296031",
+  "description": "A2A (Agent2Agent) 호환 AI 에이전트 시스템",
+  "features": [
+    "MCP (Model Context Protocol) 서버 지원",
+    "다중 AI 모델 지원 (OpenAI, Anthropic, Google, Cohere)",
+    "웹 검색 및 날씨 정보 제공",
+    "비동기 및 동기 API 지원",
+    "쉬운 설치 및 사용"
+  ],
+  "installation": {
+    "git": "git clone https://github.com/yourusername/a2a-agent-system.git",
+    "install": "./install.sh 또는 install.bat",
+    "pip": "pip install -e ."
+  },
+  "requirements": [
+    "Python 3.8+",
+    "API 키 (최소 하나의 AI 서비스)"
+  ]
+}
