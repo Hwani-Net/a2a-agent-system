@@ -1,5 +1,7 @@
 # A2A Agent System with MGX-Inspired Team Collaboration
 
+[![smithery badge](https://smithery.ai/badge/@Hwani-Net/a2a-agent-system)](https://smithery.ai/server/@Hwani-Net/a2a-agent-system)
+
 A comprehensive **Agent-to-Agent (A2A)** protocol implementation featuring **MGX-inspired multi-agent team collaboration**. This system combines the power of A2A interoperability with the innovative team-based approach found in MGX (<https://mgx.dev/>).
 
 ## 🌟 New MGX-Inspired Features
@@ -40,6 +42,14 @@ Inspired by MGX's "Dream, Chat, Create" philosophy, our system now includes a sp
 - AI 서비스 API 키 (선택사항)
 
 ## 🚀 빠른 시작
+
+### Installing via Smithery
+
+To install A2A Agent System with MGX-Inspired Team Collaboration for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@Hwani-Net/a2a-agent-system):
+
+```bash
+npx -y @smithery/cli install @Hwani-Net/a2a-agent-system --client claude
+```
 
 ### 1. 환경 설정
 
