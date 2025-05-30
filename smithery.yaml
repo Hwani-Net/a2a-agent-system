@@ -1,0 +1,42 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: http
+
+configSchema:
+  # JSON Schema defining the configuration options for the A2A MCP.
+  type: object
+  required: []  # No required fields - all API keys are optional
+  properties:
+    OPENAI_API_KEY:
+      type: string
+      description: "OPENAI_API_KEY - Your OpenAI API key for GPT models"
+    ANTHROPIC_API_KEY:
+      type: string
+      description: "ANTHROPIC_API_KEY - Your Anthropic API key for Claude models" 
+    GOOGLE_API_KEY:
+      type: string
+      description: "GOOGLE_API_KEY - Your Google API key for Gemini models"
+    COHERE_API_KEY:
+      type: string
+      description: "COHERE_API_KEY - Your Cohere API key for language models"
+    AI_SERVICE:
+      type: string
+      default: openai
+      description: "AI_SERVICE - Preferred AI service (openai, anthropic, google, cohere)"
+      enum: ["openai", "anthropic", "google", "cohere"]
+    MODEL_NAME:
+      type: string
+      default: gpt-4
+      description: "MODEL_NAME - Default model to use for text generation"
+    PORT:
+      type: string
+      default: "8000"
+      description: "PORT - Port for A2A server HTTP interface"
+
+exampleConfig:
+  OPENAI_API_KEY: sk-your-openai-key-here
+  ANTHROPIC_API_KEY: your-anthropic-key-here
+  AI_SERVICE: openai
+  MODEL_NAME: gpt-4
+  PORT: "8000" 
