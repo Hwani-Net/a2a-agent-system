@@ -1,7 +1,9 @@
 # Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
 
 startCommand:
-  type: http
+  type: stdio
+  command: python
+  args: ["mcp_server.py"]
 
 configSchema:
   # JSON Schema defining the configuration options for the A2A MCP.
@@ -10,29 +12,36 @@ configSchema:
   properties:
     OPENAI_API_KEY:
       type: string
-      description: "OPENAI_API_KEY - Your OpenAI API key for GPT models"
+      title: "OpenAI API Key"
+      description: "Your OpenAI API key for GPT models"
     ANTHROPIC_API_KEY:
       type: string
-      description: "ANTHROPIC_API_KEY - Your Anthropic API key for Claude models" 
+      title: "Anthropic API Key" 
+      description: "Your Anthropic API key for Claude models"
     GOOGLE_API_KEY:
       type: string
-      description: "GOOGLE_API_KEY - Your Google API key for Gemini models"
+      title: "Google API Key"
+      description: "Your Google API key for Gemini models"
     COHERE_API_KEY:
       type: string
-      description: "COHERE_API_KEY - Your Cohere API key for language models"
+      title: "Cohere API Key"
+      description: "Your Cohere API key for language models"
     AI_SERVICE:
       type: string
+      title: "AI Service"
       default: openai
-      description: "AI_SERVICE - Preferred AI service (openai, anthropic, google, cohere)"
+      description: "Preferred AI service"
       enum: ["openai", "anthropic", "google", "cohere"]
     MODEL_NAME:
       type: string
+      title: "Model Name"
       default: gpt-4
-      description: "MODEL_NAME - Default model to use for text generation"
+      description: "Default model to use for text generation"
     PORT:
       type: string
+      title: "Port"
       default: "8000"
-      description: "PORT - Port for A2A server HTTP interface"
+      description: "Port for A2A server HTTP interface"
 
 exampleConfig:
   OPENAI_API_KEY: sk-your-openai-key-here
