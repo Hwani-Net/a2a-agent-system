@@ -6,7 +6,7 @@ startCommand:
   args: ["mcp_server.py"]
 
 configSchema:
-  # JSON Schema defining the configuration options for the A2A MCP.
+  # JSON Schema defining the configuration options for the Crew Sync Agent MCP.
   type: object
   required: []  # No required fields - all API keys are optional
   properties:
@@ -30,22 +30,28 @@ configSchema:
       type: string
       title: "AI Service"
       default: openai
-      description: "Preferred AI service"
+      description: "Preferred AI service for the crew collaboration"
       enum: ["openai", "anthropic", "google", "cohere"]
     MODEL_NAME:
       type: string
       title: "Model Name"
       default: gpt-4
-      description: "Default model to use for text generation"
+      description: "Default model for crew synchronization"
     PORT:
       type: string
       title: "Port"
       default: "8000"
-      description: "Port for A2A server HTTP interface"
+      description: "Port for Crew Sync Agent server interface"
+    MAX_CREW_SIZE:
+      type: string
+      title: "Maximum Crew Size"
+      default: "10"
+      description: "Maximum number of crew members for collaboration"
 
 exampleConfig:
   OPENAI_API_KEY: sk-your-openai-key-here
   ANTHROPIC_API_KEY: your-anthropic-key-here
   AI_SERVICE: openai
   MODEL_NAME: gpt-4
-  PORT: "8000" 
+  PORT: "8000"
+  MAX_CREW_SIZE: "10" 
