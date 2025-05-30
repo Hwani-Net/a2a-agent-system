@@ -1,0 +1,247 @@
+{
+  "a2a_version": "0.2.1",
+  "identity": {
+    "name": "A2A MGX-Inspired Agent Team",
+    "description": "24/7 AI Development Team - Dream, Chat, Create. Multi-agent collaboration system inspired by MGX platform with specialized team members.",
+    "version": "1.2.0",
+    "author": "A2A Development Team",
+    "tags": [
+      "ai-agents",
+      "team-collaboration",
+      "code-generation",
+      "mgx-inspired",
+      "multi-agent"
+    ],
+    "avatar": "🤖👥"
+  },
+  "capabilities": {
+    "text_generation": true,
+    "text_analysis": true,
+    "web_search": true,
+    "weather_info": true,
+    "team_collaboration": true,
+    "code_generation": true,
+    "project_management": true,
+    "artifact_creation": true
+  },
+  "communication": {
+    "protocols": [
+      "a2a"
+    ],
+    "formats": [
+      "json-rpc-2.0"
+    ],
+    "transport": [
+      "http",
+      "websocket"
+    ]
+  },
+  "authentication": {
+    "methods": [
+      "api_key",
+      "bearer_token"
+    ],
+    "required": false
+  },
+  "endpoints": {
+    "agent_card": "/agent-card",
+    "a2a": "/a2a"
+  },
+  "skills": [
+    {
+      "name": "text_generation",
+      "description": "Generate human-like text content using advanced AI models",
+      "parameters": {
+        "prompt": {
+          "type": "string",
+          "required": true
+        },
+        "max_tokens": {
+          "type": "integer",
+          "default": 500
+        },
+        "temperature": {
+          "type": "number",
+          "default": 0.7
+        }
+      }
+    },
+    {
+      "name": "text_analysis",
+      "description": "Analyze and summarize text content",
+      "parameters": {
+        "text": {
+          "type": "string",
+          "required": true
+        },
+        "analysis_type": {
+          "type": "string",
+          "enum": [
+            "summary",
+            "sentiment",
+            "keywords"
+          ],
+          "default": "summary"
+        }
+      }
+    },
+    {
+      "name": "web_search",
+      "description": "Search the web for information (mock implementation)",
+      "parameters": {
+        "query": {
+          "type": "string",
+          "required": true
+        },
+        "max_results": {
+          "type": "integer",
+          "default": 5
+        }
+      }
+    },
+    {
+      "name": "weather_info",
+      "description": "Get weather information for a location (mock implementation)",
+      "parameters": {
+        "location": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  ],
+  "mgx_team_features": {
+    "team_members": [
+      {
+        "name": "Mike",
+        "role": "team_leader",
+        "avatar": "👨‍💼",
+        "description": "Experienced team leader who coordinates projects and manages team workflow",
+        "specialties": [
+          "project_management",
+          "team_coordination",
+          "strategic_planning"
+        ]
+      },
+      {
+        "name": "Alex",
+        "role": "engineer",
+        "avatar": "👨‍💻",
+        "description": "Full-stack developer with expertise in modern web technologies",
+        "specialties": [
+          "web_development",
+          "backend_apis",
+          "database_design",
+          "devops"
+        ]
+      },
+      {
+        "name": "Emma",
+        "role": "product_manager",
+        "avatar": "👩‍💼",
+        "description": "Product manager focused on user experience and market requirements",
+        "specialties": [
+          "user_research",
+          "product_strategy",
+          "feature_planning",
+          "market_analysis"
+        ]
+      },
+      {
+        "name": "David",
+        "role": "data_analyst",
+        "avatar": "👨‍🔬",
+        "description": "Data scientist who provides insights and analytics solutions",
+        "specialties": [
+          "data_analysis",
+          "machine_learning",
+          "statistics",
+          "visualization"
+        ]
+      },
+      {
+        "name": "Bob",
+        "role": "architect",
+        "avatar": "👨‍🏗️",
+        "description": "System architect who designs scalable and robust solutions",
+        "specialties": [
+          "system_design",
+          "architecture_patterns",
+          "scalability",
+          "security"
+        ]
+      },
+      {
+        "name": "Sophia",
+        "role": "ui_designer",
+        "avatar": "👩‍🎨",
+        "description": "UI/UX designer who creates beautiful and intuitive interfaces",
+        "specialties": [
+          "ui_design",
+          "ux_research",
+          "prototyping",
+          "user_interface"
+        ]
+      }
+    ],
+    "team_capabilities": [
+      "Project creation and management",
+      "Multi-agent team discussions",
+      "Code and artifact generation",
+      "Technical architecture planning",
+      "User experience design",
+      "Data analysis and insights",
+      "System design and scalability"
+    ],
+    "collaboration_methods": [
+      "mgx/create_project",
+      "mgx/team_discussion",
+      "mgx/generate_artifact",
+      "mgx/team_info",
+      "mgx/project_status"
+    ]
+  },
+  "examples": [
+    {
+      "title": "MGX-Style Project Creation",
+      "description": "Create a project with team collaboration",
+      "request": {
+        "method": "mgx/create_project",
+        "params": {
+          "description": "Build a modern e-commerce website with user authentication and payment integration"
+        }
+      }
+    },
+    {
+      "title": "Team Discussion",
+      "description": "Get team input on technical decisions",
+      "request": {
+        "method": "mgx/team_discussion",
+        "params": {
+          "project_id": "example-project-id",
+          "topic": "What's the best tech stack for this project?"
+        }
+      }
+    },
+    {
+      "title": "Generate Code Artifact",
+      "description": "Have the team generate code components",
+      "request": {
+        "method": "mgx/generate_artifact",
+        "params": {
+          "project_id": "example-project-id",
+          "component_type": "React authentication component"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-05-30T16:57:14.545741",
+    "last_updated": "2025-05-30T16:57:14.545758",
+    "supported_languages": [
+      "en"
+    ],
+    "response_time": "< 5 seconds",
+    "inspiration": "MGX (https://mgx.dev/) - AI team collaboration platform"
+  }
+}

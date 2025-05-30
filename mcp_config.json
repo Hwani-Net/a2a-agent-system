@@ -1,0 +1,43 @@
+{
+    "mcpServers": {
+        "a2a-agent-system": {
+            "command": "python",
+            "args": [
+                "-m",
+                "a2a_agent_system.mcp_server"
+            ],
+            "env": {},
+            "disabled": false,
+            "alwaysAllow": [],
+            "description": "A2A (Agent2Agent) 호환 AI 에이전트 시스템",
+            "capabilities": {
+                "tools": [
+                    "generate_text",
+                    "analyze_text",
+                    "web_search",
+                    "get_weather"
+                ],
+                "resources": [
+                    "agent://card",
+                    "agent://config",
+                    "agent://status"
+                ],
+                "prompts": [
+                    "code_review",
+                    "documentation"
+                ]
+            }
+        }
+    },
+    "defaults": {
+        "timeout": 30000,
+        "retries": 3,
+        "logLevel": "info"
+    },
+    "global": {
+        "enableLogging": true,
+        "logFile": "a2a_mcp.log",
+        "allowUnsafeCommands": false,
+        "maxConcurrentConnections": 10
+    }
+}
